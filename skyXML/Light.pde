@@ -1,4 +1,5 @@
 import lmu.*;
+class Light{
 
 PImage light;
 PImage buildings;
@@ -10,7 +11,6 @@ int b = 85;
 
 
 void setup(){
-  size(500,500);
  light = loadImage("Lights.png");
  buildings = loadImage("Buildings.png");
  light.loadPixels();
@@ -22,7 +22,7 @@ void setup(){
   multi = 255.0 / (left);
 }
 
-void draw(){
+public void paint(int xPos, int yPos){
 
  // get current sensor values
   int[] vals = LmuTracker.getLMUArray();
@@ -41,4 +41,5 @@ rect (380,270,117,230);
 noStroke();
 image(buildings,0,0);
 
+}
 }

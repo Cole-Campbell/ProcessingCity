@@ -1,5 +1,3 @@
-class Sky{
-
 XML xml;
 String url = "http://weather.yahooapis.com/forecastrss?w=23397329";
 XML condition;
@@ -46,13 +44,14 @@ String isolatedThundershowers="Isolated Thundershowers";
 String con;
 
 void setup() {
+  size(500,500);
   xml = loadXML (url);
   XML channel = xml.getChild("channel");
   XML item = channel.getChild ("item");
   condition = item.getChild ("yweather:condition"); 
 }
 
-public void paint(int xPos, int yPos){
+void draw(){
   con=condition.getString("text");
   println(con);
   if (con.equals(cloudy)||con.equals(partlyCloudy)||con.equals(mostlyCloudy) == true){
@@ -76,5 +75,4 @@ public void paint(int xPos, int yPos){
   else {
     background(137,195,234);
   }
-}
 }
