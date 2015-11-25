@@ -1,5 +1,9 @@
 XML xml;
-String url = "http://weather.yahooapis.com/forecastrss?w=23397329";
+String url = "http://weather.yahooapis.com/forecastrss?w=560362";
+
+XML weatherXML;
+String weatherUrl = "weather.xml";
+
 XML condition;
 String cloudy="Cloudy";
 String tornado="Tornado";
@@ -20,6 +24,7 @@ String hail="Hail";
 String sleet="Sleet";
 String dust="Dust";
 String foggy="Foggy";
+String fog="Fog";
 String haze="Haze";
 String smoky="Smoky";
 String blustery="Blustery";
@@ -31,6 +36,7 @@ String clear="Clear";
 String sunny="Sunny";
 String fair="Fair";
 String mixedRainHail="Mixed Rain And Hail";
+String lightRain="Light Rain";
 String hot="Hot";
 String isolatedThunderstorms="Isolated Thunderstorms";
 String scatteredThunderstorms="Scattered Thunderstorms";
@@ -41,19 +47,44 @@ String thundershowers="Thundershowers";
 String snowShowers="Snow Showers";
 String isolatedThundershowers="Isolated Thundershowers";
 
-String con;
 
 void setup() {
   size(500,500);
   xml = loadXML (url);
   XML channel = xml.getChild("channel");
   XML item = channel.getChild ("item");
-  condition = item.getChild ("yweather:condition"); 
-}
+  condition = item.getChild ("yweather:condition");
+  String con=condition.getString("text");
+  
+  size(500,500);
+  weatherXML = loadXML (weatherUrl);
+  XML [] localCondition = new XML[5];
+  localCondition = weatherXML.getChildren("condition");
 
-void draw(){
+  println(con);
+
+  for (int i = 0; i<=3; i++){ 
+    String localCon=localCondition[i].getString("status");
+    int localRed=localCondition[i].getInt("red");
+    int localGreen=localCondition[i].getInt("green");
+    int localBlue=localCondition[i].getInt("blue");
+      if(con.equals(localCon)){
+        background(localRed,localGreen,localBlue);
+      }
+  }
+  
+  /*for (int i = 0; i<=3; i++){
+      println(condition[i]);
+  }*/
+  
+  for (int i = 0; con.equals(localCondition[i])== true; i++){
+      
+  }
+
+/*void draw(){
   con=condition.getString("text");
   println(con);
+  
   if (con.equals(cloudy)||con.equals(partlyCloudy)||con.equals(mostlyCloudy) == true){
     background(173,208,214);
   } else if (con.equals(tornado)||con.equals(tropicalStorm)||con.equals(hurricane)){
@@ -62,9 +93,9 @@ void draw(){
     background(151,157,160);
   } else if(con.equals(mixedRainSnow)||con.equals(mixedSnowSleet)||con.equals(snowFlurries)||con.equals(lightSnowShowers)||con.equals(blowingSnow)||con.equals(snow)||con.equals(heavySnow)||con.equals(scatteredSnowShowers)||con.equals(snowShowers)){
     background(221,220,216);
-  } else if(con.equals(mixedRainSleet)||con.equals(freezingDrizzle)||con.equals(hail)||con.equals(sleet)||con.equals(mixedRainHail)){
+  } else if(con.equals(mixedRainSleet)||con.equals(freezingDrizzle)||con.equals(hail)||con.equals(sleet)||con.equals(mixedRainHail)||con.equals(lightRain)){
     background(173,208,214);
-  } else if(con.equals(dust)||con.equals(foggy)||con.equals(haze)||con.equals(smoky)){
+  } else if(con.equals(dust)||con.equals(foggy)||con.equals(fog)||con.equals(haze)||con.equals(smoky)){
     background(176,206,219);
     //This colour may be used as an overlay fog (174,177,180)//
   } else if(con.equals(clear)||con.equals(sunny)||con.equals(fair)||con.equals(hot)||con.equals(cold)||con.equals(windy)||con.equals(blustery)){
@@ -75,4 +106,5 @@ void draw(){
   else {
     background(137,195,234);
   }
+}*/
 }

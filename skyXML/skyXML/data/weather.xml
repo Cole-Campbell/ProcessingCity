@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<weather>
+	<condition status="cloudy" red="222" green="3" blue="4"></condition>
+	<condition status="Partly Cloudy" red="2" green="33" blue="4"></condition>
+	<condition status="cloudy" red="2" green="222" blue="4"></condition>
+	<condition status="cloudy" red="200" green="3" blue="4"></condition>
+	<condition status="cloudy" red="2" green="211" blue="4"></condition>
+</weather>
