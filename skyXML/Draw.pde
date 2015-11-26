@@ -1,17 +1,14 @@
-import ddf.minim.*;
-Minim minim;
-AudioInput in;
-
 Sky sky;
 buildingLight light;
+Mic wind;
+Cloud cloud;
 
 PImage bLight;
 PImage buildings;
 
 void settings() {
   size(500, 500);
-  minim = new Minim(this);
-  in = minim.getLineIn();
+  wind = new Mic();
 }
 
 
@@ -22,10 +19,14 @@ void setup() {
   loadPixels();
   light = new buildingLight();
   sky = new Sky();
+  cloud = new Cloud();
+  
 }
 
 
 void draw() {
   sky.paint();
   light.paint();
+  cloud.paint(0,0);
+  println(wind.in.left.level());
 }
