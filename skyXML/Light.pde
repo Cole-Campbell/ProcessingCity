@@ -1,14 +1,14 @@
 import lmu.*;
-
+public int cd;
 class buildingLight {
-  
+
   float multi;
   int left;
   int r = 255;
   int g = 250;
   int b = 85;
   buildingLight() {
-    
+
 
     // initial sensor values
     int[] lmu_start = LmuTracker.getLMUArray();
@@ -22,7 +22,26 @@ class buildingLight {
     int li = (int)(vals[0] * multi)%254;
 
     // left sensor
+    
+    if(li == 1){
+      li=255;
+    }
+    
+    if (li<=255&&li>=200){
+    cd=0; 
+  } else if(li<=199&&li>=150){
+    cd=50;
+  } else if(li<=149&&li>=100){
+    cd=120;
+  } else if(li<=99&&li>=50){
+    cd=150;
+  } else if(li<=49&&li>=00){
+    cd=170;
+  }
+  
+  
     fill(250-li, 244-li, 162-li);
+    
 
     rect (0, 240, 140, 250);
     rect (140, 320, 105, 180);
@@ -31,6 +50,5 @@ class buildingLight {
 
     noStroke();
     image(buildings, 0, 0);
-
   }
 }

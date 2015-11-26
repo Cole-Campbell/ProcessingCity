@@ -1,3 +1,7 @@
+import ddf.minim.*;
+Minim minim;
+AudioInput in;
+
 Sky sky;
 buildingLight light;
 
@@ -6,20 +10,22 @@ PImage buildings;
 
 void settings() {
   size(500, 500);
+  minim = new Minim(this);
+  in = minim.getLineIn();
 }
 
-void setup(){
+
+void setup() {
   bLight = loadImage("Lights.png");
   buildings = loadImage("Buildings.png");
   bLight.loadPixels();
   loadPixels();
   light = new buildingLight();
   sky = new Sky();
-  println(bgColor);
 }
 
 
 void draw() {
-  background (bgColor);
+  sky.paint();
   light.paint();
 }
