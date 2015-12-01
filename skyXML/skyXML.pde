@@ -1,4 +1,4 @@
-XML [] localCondition = new XML[38]; //<>//
+XML [] localCondition = new XML[38];
 String con;
 public class Sky {
 
@@ -33,6 +33,8 @@ public class Sky {
       int localBlue=localCondition[i].getInt("blue");
       if (con.equals(localCon)) {
         background(localRed-cd, localGreen-cd, localBlue-cd);
+      } else {
+        background(193-cd, 202-cd, 240-cd);
       }
     }
   }

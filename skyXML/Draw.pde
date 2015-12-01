@@ -28,5 +28,4 @@ void draw() {
   sky.paint();
   light.paint();
   cloud.paint(0,0);
-  println(wind.in.left.level());
 }
