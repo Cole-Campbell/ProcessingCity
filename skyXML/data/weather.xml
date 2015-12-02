@@ -1,44 +1,47 @@
 <?xml version="1.0"?>
 <weather>
-	<condition status="Cloudy" red="173" green="208" blue="214" wind=".02"></condition>
-	<condition status="Partly Cloudy" red="173" green="208" blue="214" wind=".02"></condition>
-	<condition status="Mostly Cloudy" red="173" green="208" blue="214" wind=".02"></condition>
-	<condition status="Mostly Cloudy/Windy" red="173" green="208" blue="214" wind=".02"></condition>
-	<condition status="Tornado" red="106" green="112" blue="101" wind=".1"></condition>
-	<condition status="Tropical Storm" red="106" green="112" blue="101" wind=".1"></condition>
-	<condition status="Hurricane" red="106" green="112" blue="101" wind=".1"></condition>
-	<condition status="Severe Thunderstorms" red="151" green="157" blue="160" wind=".03"></condition>
-	<condition status="Thunderstorms" red="151" green="157" blue="160" wind=".03"></condition>
-	<condition status="Isolated Thunderstorms" red="151" green="157" blue="160" wind=".03"></condition>
-	<condition status="Scattered Thunderstorms" red="151" green="157" blue="160" wind=".03"></condition>
-	<condition status="Thundershowers" red="151" green="157" blue="160" wind=".03"></condition>
-	<condition status="Isolated Thundershowers" red="151" green="157" blue="160" wind=".03"></condition>
-	<condition status="Mixed Rain and Snow" red="221" green="220" blue="216" wind=".02"></condition>
-	<condition status="Mixed Snow and Sleet" red="221" green="220" blue="216" wind=".02"></condition>
-	<condition status="Snow Flurries" red="221" green="220" blue="216" wind=".02"></condition>
-	<condition status="Light Snow Showers" red="221" green="220" blue="216" wind=".02"></condition>
-	<condition status="Blowing Snow" red="221" green="220" blue="216" wind=".02"></condition>
-	<condition status="Snow" red="221" green="220" blue="216" wind=".02"></condition>
-	<condition status="Heavy Snow" red="221" green="220" blue="216" wind=".02"></condition>
-	<condition status="Scattered Snow Showers" red="221" green="220" blue="216" wind=".02"></condition>
-	<condition status="Snow Showers" red="221" green="220" blue="216" wind=".02"></condition>
-	<condition status="Mixed Rain and Sleet" red="173" green="208" blue="214" wind=".02"></condition>
-	<condition status="Freezing Drizzle" red="173" green="208" blue="214" wind=".02"></condition>
-	<condition status="Hail" red="173" green="208" blue="214" wind=".02"></condition>
-	<condition status="Sleet" red="173" green="208" blue="214" wind=".02"></condition>
-	<condition status="Mixed Rain and Hail" red="173" green="208" blue="214" wind=".02"></condition>
-	<condition status="Dust" red="176" green="206" blue="219" wind=".02"></condition>
-	<condition status="Foggy" red="176" green="206" blue="219" wind=".02"></condition>
-	<condition status="Haze" red="176" green="206" blue="219" wind=".02"></condition>
-	<condition status="Smoky" red="176" green="206" blue="219" wind=".02"></condition>
-	<condition status="Clear" red="193" green="202" blue="240" wind=".02"></condition>
-	<condition status="Sunny" red="193" green="202" blue="240" wind=".02"></condition>
-	<condition status="Fair" red="193" green="202" blue="240" wind=".02"></condition>
-	<condition status="Hot" red="193" green="202" blue="240" wind=".02"></condition>
-	<condition status="Cold" red="193" green="202" blue="240" wind=".02"></condition>
-	<condition status="Windy" red="193" green="202" blue="240" wind=".04"></condition>
-	<condition status="Blustery" red="193" green="202" blue="240" wind=".02"></condition>
-	<condition status="Showers" red="121" green="155" blue="174" wind=".02"></condition>
-	<condition status="Scattered Showers" red="121" green="155" blue="174" wind=".02"></condition>
-	<condition status="Drizzle" red="121" green="155" blue="174" wind=".02"></condition>
+	<condition status="Cloudy" red="173" green="208" blue="214" wind="2" clouds="50"></condition>
+	<condition status="Partly Cloudy" red="173" green="208" blue="214" wind=".02" clouds="18"></condition>
+	<condition status="Mostly Cloudy" red="173" green="208" blue="214" wind=".02" clouds="20"></condition>
+	<condition status="Mostly Cloudy/Windy" red="173" green="208" blue="214" wind=".03" clouds="20"></condition>
+	<condition status="Tornado" red="106" green="112" blue="101" wind=".1" clouds="25"></condition>
+	<condition status="Tropical Storm" red="106" green="112" blue="101" wind=".1" clouds="25"></condition>
+	<condition status="Hurricane" red="106" green="112" blue="101" wind=".1" clouds="25"></condition>
+	<condition status="Severe Thunderstorms" red="151" green="157" blue="160" wind=".03" clouds="22"></condition>
+	<condition status="Thunderstorms" red="151" green="157" blue="160" wind=".03" clouds="20"></condition>
+	<condition status="Isolated Thunderstorms" red="151" green="157" blue="160" wind=".03" clouds="18"></condition>
+	<condition status="Scattered Thunderstorms" red="151" green="157" blue="160" wind=".03" clouds="15"></condition>
+	<condition status="Thundershowers" red="151" green="157" blue="160" wind=".03" clouds="18"></condition>
+	<condition status="Isolated Thundershowers" red="151" green="157" blue="160" wind=".03" clouds="16"></condition>
+	<condition status="Mixed Rain and Snow" red="221" green="220" blue="216" wind=".02" clouds="19"></condition>
+	<condition status="Mixed Snow and Sleet" red="221" green="220" blue="216" wind=".02" clouds="18"></condition>
+	<condition status="Snow Flurries" red="221" green="220" blue="216" wind=".02" clouds="22"></condition>
+	<condition status="Light Snow Showers" red="221" green="220" blue="216" wind=".02" clouds="17"></condition>
+	<condition status="Blowing Snow" red="221" green="220" blue="216" wind=".04" clouds="20"></condition>
+	<condition status="Snow" red="221" green="220" blue="216" wind=".01" clouds="20"></condition>
+	<condition status="Heavy Snow" red="221" green="220" blue="216" wind=".02" clouds="25"></condition>
+	<condition status="Scattered Snow Showers" red="221" green="220" blue="216" wind=".02" clouds="21"></condition>
+	<condition status="Snow Showers" red="221" green="220" blue="216" wind=".02" clouds="18"></condition>
+	<condition status="Mixed Rain and Sleet" red="173" green="208" blue="214" wind=".02" clouds="21"></condition>
+	<condition status="Freezing Drizzle" red="173" green="208" blue="214" wind=".02" clouds="16"></condition>
+	<condition status="Hail" red="173" green="208" blue="214" wind=".02" clouds="15"></condition>
+	<condition status="Sleet" red="173" green="208" blue="214" wind=".02" clouds="15"></condition>
+	<condition status="Mixed Rain and Hail" red="173" green="208" blue="214" wind=".02" clouds="18"></condition>
+	<condition status="Dust" red="176" green="206" blue="219" wind=".02" clouds="16"></condition>
+	<condition status="Foggy" red="176" green="206" blue="219" wind=".02" clouds="16"></condition>
+	<condition status="Haze" red="176" green="206" blue="219" wind=".02" clouds="16"></condition>
+	<condition status="Smoky" red="176" green="206" blue="219" wind=".02" clouds="16"></condition>
+	<condition status="Clear" red="193" green="202" blue="240" wind=".02" clouds="5"></condition>
+	<condition status="Sunny" red="193" green="202" blue="240" wind=".02" clouds="5"></condition>
+	<condition status="Fair" red="193" green="202" blue="240" wind=".02" clouds="5"></condition>
+	<condition status="Hot" red="193" green="202" blue="240" wind=".02" clouds="5"></condition>
+	<condition status="Cold" red="193" green="202" blue="240" wind=".02" clouds="5"></condition>
+	<condition status="Windy" red="193" green="202" blue="240" wind=".04" clouds="8"></condition>
+	<condition status="Blustery" red="193" green="202" blue="240" wind=".02" clouds="12"></condition>
+	<condition status="Showers" red="121" green="155" blue="174" wind=".02" clouds="18"></condition>
+	<condition status="Scattered Showers" red="121" green="155" blue="174" wind=".02" clouds="14"></condition>
+	<condition status="Drizzle" red="121" green="155" blue="174" wind=".02" clouds="13"></condition>
+	<condition status="Light Drizzle" red="121" green="155" blue="174" wind="2" clouds="13"></condition>
+	<condition status="Fair/Windy" red="121" green="155" blue="174" wind=".02" clouds="50"></condition>
+	<condition status="Partly Cloudy/Windy" red="121" green="155" blue="174" wind="2" clouds="50"></condition>
 </weather>

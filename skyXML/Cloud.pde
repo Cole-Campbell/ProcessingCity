@@ -4,20 +4,19 @@ class Cloud {
   float y;
   float rad;
   float dist;
-
   //Two Dimensional Array, so all variable information for each circle can be stored within
   //one array instead of multiple.
-  float[][] cr = new float[20][6];
+  float[][] cr = new float[50][6];
 
   Cloud() {
     //Initializing all variable within a For loop so no more than 20 values are created
     //Random values are created and stored so circles are all randomly generated
     //While also assigning them to their specific array location 
-    for (int i = 0; i<10; i++) {
-      x = random(-200, 500);
-      y = random(0, 200);
-      rad = random(10, 50); 
-
+    for (int i = 0; i<20; i++) {
+      x = random(-200, width);
+      y = random(0, 350);
+      rad = random(10, 100); 
+      dist = random(5,20);
       cr[i][0]=x;
       cr[i][1]=y;
       cr[i][2]=rad;
@@ -30,15 +29,16 @@ class Cloud {
     for (int c=0; c<10; c++) {
       fill(255-cd);
       for (int i=0; i<=10; i++) {
-        ellipse(cr[c][0]+i*10, cr[c][1], cr[c][2], cr[c][2]);
-        if (cr[c][0]>=700){
+        ellipse(cr[c][0]+i*dist, cr[c][1], cr[c][2], cr[c][2]);
+        if (cr[c][0]>=1250){
         cr[c][0]=-200;
-        cr[c][1]=random(0,200);
-        cr[c][2]=random(10,50);
+        cr[c][1]=random(0,350);
+        cr[c][2]=random(10,100);
         }
       }
       if (cr[c][0]==cr[c][0]) {
-        cr[c][0]=cr[c][0]+1+wind.in.left.level();
+        cr[c][0]=cr[c][0]+windBlow+wind.in.left.level()*2;
+        
       }
       
     }
